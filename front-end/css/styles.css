@@ -75,6 +75,10 @@ body{
     margin-bottom: 10px;
 }
 
+main {
+    padding: 1rem 4rem;
+}
+
 footer{
     padding-top: 15px;
     margin-top: auto;
@@ -101,32 +105,93 @@ footer{
     flex-direction: column;
 }
 
-<<<<<<< HEAD
 .tarjetas{
-    display: flex;
-    flex-direction: column;
-    background-color: #cce;
-    margin: 1rem;
-    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem 0;
+    grid-gap: 2rem;
+
 }
 
-.moneda{
+.tarjeta {
+    background-color: #eeeeee;
+    padding: 2rem 2rem 6rem;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: column;
+
+}
+
+.actualizado {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.actualizado span {
+    font-size: 0.75rem;
+    background-color: rgb(65, 231, 65);
+    border-radius: 2rem;
+    color: white;
+    padding: 0.25rem 0.5rem;
+}
+.nombre_tarjeta{
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+.nombre_casa{
+    font-weight: 600;
+    color: #222
+}
+.moneda{
     font-size: 40px;
-    padding: 10px 0px;
-    margin-left: 10px;
+    color: #222;
+    font-weight: 900;
 }
 
 .valores{
     display: flex;
     flex-direction: row;
-    padding: 1em;
-    justify-content: space-evenly;
+
+
+
 }
 
 .compra{
     display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    flex: 1;
+}
+.venta{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    flex: 1;
+}
+.actualizacion{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    flex: 2;
+}
+.valor_etiqueta{
+    color: #666;
+    font-size: 12px;
 
 }
-=======
->>>>>>> e7d3799151f564159aaf593c49afca93d6d694b9
+.valor{
+    color: #222;
+    font-weight: 700;
+    font-size: 12px;
+}
+.estadisticas_contenedor {
+    width: 100vw;
+
+}
+
+.estadisticas_contenedor img {
+    width: 100%;
+    height: 100%;
+}
