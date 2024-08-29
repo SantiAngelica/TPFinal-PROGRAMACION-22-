@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "fuente";
+    src: url("CaviarDreams.ttf");
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fuente;
+   
+}
+li{
+    list-style: none
+}
+a{
+    text-decoration: none;
+}
+
+.btn-mail{
+    padding: 10px;
+    background-color: #ffc61a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+html{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.nav-item{
+    margin-right: 30px;
+    padding: 10px;
+}
+
+.navbar{
+    height: 70px;
+    padding: 10px;
+    background-color: #24242405;
+}
+.navbar-collapse{
+    width: fit-content;
+    right: 0;
+}
+.navbar-nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.container-navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    color: white;
+
+}
+
+.nav-link:hover{
+    color: #ffc61a;
+}
+
+.li-footer{
+    text-align: center;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+footer{
+    padding-top: 15px;
+    margin-top: auto;
+    display:flex;
+    justify-content: center;
+    background-color: #24242405;
+}
+
+.active{
+    background-color: #fada791f ;
+    border-radius: 10px;
+    
+}
+.active:hover a{
+    color: black;
+}
+.logo{
+    font-size: 50px;
+    color: #ffc61a;
+ }
+
+.formulario-mail{
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjetas{
+    display: flex;
+    flex-direction: column;
+    background-color: #cce;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.moneda{
+    display: flex;
+    font-size: 40px;
+    padding: 10px 0px;
+    margin-left: 10px;
+}
+
+.valores{
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    justify-content: space-evenly;
+}
+
+.compra{
+    display: flex;
+
+}
