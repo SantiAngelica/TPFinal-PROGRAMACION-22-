@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
+    
   </head>
   <body>
     <header>
@@ -27,6 +30,7 @@
               <button
                 type="button"
                 class="btn-mail"
+                id="btn_mail"
               >
                 RECIBIR POR MAIL
               </button>
@@ -36,39 +40,56 @@
       </nav>
     </header>
 
-  <footer>
-    <ul class="footer">
-      <li class="li-footer">
-        SANTIAGO ANGELICA - MAXIMILIANO PEREZ - SEBASTIAN ORTIGOZA - DAVID
-        CASARES
-      </li>
-      <li class="li-footer">
-        Programacion II - Tecnicatura Universitaria en Programacion UTN
-      </li>
-      <li class="li-footer">
-        Los datos recopilados en el sitio web son propiedad de
-        https://dolarapi.com/docs/
-      </li>
-    </ul>
-  </footer>
-  <div class="modal_container" id="modal_container">
-    <div class="modal">
-      <div class="modal_header">
-        <h2>¡Quiero recibir las cotizaciones!</h2>
-        <i class="fa-solid fa-xmark btn-close" id="btn_close"></i>
+    <main>
+      <div>
+        <h2>COTIZACIONES</h2>
       </div>
-      <form>
-        <label>Ingrese su email:</label>
-        <input type="email"></input>
-        <button type="button">ENVIAR</button>
-      </form>
+      <div class="tarjetas" id="box-tarjetas">
+       
+          
+      </div>
+    </main>
+
+
+
+
+    <footer>
+      <ul class="footer">
+        <li class="li-footer">
+          SANTIAGO ANGELICA - MAXIMILIANO PEREZ - SEBASTIAN ORTIGOZA - DAVID
+          CASARES
+        </li>
+        <li class="li-footer">
+          Programacion II - Tecnicatura Universitaria en Programacion UTN
+        </li>
+        <li class="li-footer">
+          Los datos recopilados en el sitio web son propiedad de
+          https://dolarapi.com/docs/
+        </li>
+      </ul>
+    </footer>
+
+    
+    <div class="modal_container" id="modal_container">
+      <div class="modal">
+        <div class="modal_header">
+          <h2>¡Quiero recibir las cotizaciones!</h2>
+          <i class="fa-solid fa-xmark btn-close" id="btn_close"></i>
+        </div>
+        <form>
+          <label>Ingrese su email:</label>
+          <input></input>
+          <button type="button">ENVIAR</button>
+        </form>
+      </div>
     </div>
-  </div>
 
-
-
-  <script src="js/modal.js"></script>
-  <script src="https://kit.fontawesome.com/e7d1877029.js" crossorigin="anonymous"></script>
-</body>
-
+   
+    <script
+      src="https://kit.fontawesome.com/e7d1877029.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/modal.js"></script>
+    <script src="js/cotizaciones.js"></script>
+  </body>
 </html>

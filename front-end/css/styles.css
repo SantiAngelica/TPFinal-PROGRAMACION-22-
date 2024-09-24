@@ -3,16 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
-@font-face {
-    font-family: "fuente";
-    src: url("static/PlayfairDisplay-Bold.ttf");
-  }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: fuente;
-   
 }
 
 li {
@@ -20,9 +10,6 @@ li {
 }
 a {
 	text-decoration: none;
-a{
-    text-decoration: none;
-    color: black
 }
 
 .btn-mail {
@@ -31,13 +18,7 @@ a{
 	color: white;
 	border: none;
 	border-radius: 10px;
-.btn-mail{
-    padding: 10px;
-    background-color: #ffc61a;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+	cursor: pointer;
 }
 
 html {
@@ -128,7 +109,7 @@ footer {
 
 .tarjeta {
 	background-color: #f8f8f8;
-	padding: 1.5rem 1.5rem 6rem;
+	padding: 1.5rem 1.5rem 1rem;
 	border-radius: 2rem;
 	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 	display: flex;
@@ -167,9 +148,12 @@ footer {
 
 .valores {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 }
 
+.valores div{
+	margin-bottom: 10px;
+}
 .compra {
 	display: flex;
 	flex-direction: column;
@@ -205,6 +189,25 @@ footer {
 	width: 100%;
 	height: 100%;
 }
+
+.active{
+    background-color: #fada791f ;
+    border-radius: 10px;
+    
+}
+.active:hover a{
+    color: black;
+}
+.logo{
+    font-size: 50px;
+    color: #ffc61a;
+ }
+
+.formulario-mail{
+    display: flex;
+    flex-direction: column;
+}
+
 .modal_container{
     display: none;
     position: fixed;

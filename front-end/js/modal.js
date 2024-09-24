@@ -2,6 +2,9 @@ const btnMail = document.getElementById("btn_mail")
 const modalContainer = document.getElementById("modal_container")
 const btnClose = document.getElementById("btn_close")
 
+
+
+
 btnMail.addEventListener("click", () => {
     modalContainer.style.display = "flex"
     document.body.style.position = "static"
@@ -15,3 +18,4 @@ btnClose.addEventListener("click", () => {
     document.body.style.height = "auto"
     document.body.style.overflow = "visible"
 })
+
