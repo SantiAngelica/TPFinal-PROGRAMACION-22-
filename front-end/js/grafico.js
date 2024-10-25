@@ -1,0 +1,103 @@
+const estadisticas_contenedor = document.getElementById('estadisticas_contenedor');
+
+const histograma = document.getElementById('histograma');
+import { obtenerDatosDolarAPI } from "./obtenerHist.js";
+
+
+const calcularValorMaximo = arr => {
+	let maxValue = arr[0].venta;
+
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i].venta > maxValue) {
+			maxValue = arr[i].venta;
+		}
+	}
+	return maxValue;
+};
+
+const mostrarEscalaValores = maxValue => {
+	const escalaDeValoresContenedor = document.createElement('div');
+	escalaDeValoresContenedor.classList.add('escala_valores_contenedor');
+	escalaDeValoresContenedor.style.height = '100%';
+	histograma.appendChild(escalaDeValoresContenedor);
+	const stepValue = Math.ceil(maxValue / 10 / 100) * 100;
+
+	for (let i = 0; i <= Math.floor(maxValue / stepValue); i++) {
+		const etiquetaValor = document.createElement('span');
+		const valor = i * stepValue;
+		etiquetaValor.textContent = valor;
+		etiquetaValor.classList.add('etiqueta_valor');
+		escalaDeValoresContenedor.appendChild(etiquetaValor);
+	}
+
+	if (maxValue % stepValue !== 0) {
+		const etiquetaValorMax = document.createElement('span');
+		etiquetaValorMax.textContent = maxValue;
+		etiquetaValorMax.classList.add('etiqueta_valor');
+		escalaDeValoresContenedor.appendChild(etiquetaValorMax);
+	}
+};
+
+const mostrarColumnasHistograma = (dolarData, maxValue) => {
+	for (let i = 0; i < dolarData.length; i++) {
+		// Defino el elemento columna y le agrego los estilos
+		const histogramaColumn = document.createElement('div');
+		const porcentajeVentaTotal = (dolarData[i].venta / maxValue) * 100;
+		histogramaColumn.classList.add('histograma_column');
+		histogramaColumn.style.height = `${porcentajeVentaTotal}%`;
+
+		// Mostrar el valor exacto de cada cifra
+		const histogramaColumnValueToast = document.createElement('div');
+		histogramaColumnValueToast.classList.add('histograma_toast');
+		const fecha = obtenerFechaFormateada(dolarData[i].fecha); // "dd de mm del aaaa"
+		histogramaColumnValueToast.textContent = `El ${fecha} el precio era de $ ${dolarData[i].venta}`;
+
+		histogramaColumn.appendChild(histogramaColumnValueToast);
+		histograma.appendChild(histogramaColumn);
+	}
+};
+
+const obtenerFechaFormateada = function (fechaSinFormatear) {
+	const anio = fechaSinFormatear.slice(0, 4);
+	const mes = obtenerMes(fechaSinFormatear.slice(5, 7));
+	let dia = fechaSinFormatear.slice(8, 10);
+	if (dia[0] == 0) {
+		dia = dia.slice(-1);
+	}
+	const fechaFormateada = `${dia} de ${mes} del ${anio}`;
+	return fechaFormateada;
+};
+
+const obtenerMes = mes => {
+	let nroMes;
+	if (mes[0] == '0') {
+		nroMes = mes.slice(-1);
+	} else {
+		nroMes = mes;
+	}
+	const meses = [
+		'enero',
+		'febrero',
+		'marzo',
+		'abril',
+		'mayo',
+		'junio',
+		'julio',
+		'agosto',
+		'septiembre',
+		'octubre',
+		'noviembre',
+		'diciembre',
+	];
+	return meses[nroMes - 1];
+};
+
+const renderizarEstadisticas = async () => {
+	const dolarData = await obtenerDatosDolarAPI("blue", 30);
+
+	const maxValue = await calcularValorMaximo(dolarData);
+	mostrarEscalaValores(maxValue);
+	mostrarColumnasHistograma(dolarData, maxValue);
+};
+
+renderizarEstadisticas();
