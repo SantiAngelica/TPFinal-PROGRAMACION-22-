@@ -4,6 +4,7 @@ export const obtenerDatosDolarAPI = async (moneda, limit) => {
 			method: 'GET',
 		});
 		const response = await request.json();
+		console.log(response)
 
 		if (response.length <= limit) {
 			return response;
