@@ -1,5 +1,5 @@
 * {
-	margin: 0;
+	
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
@@ -383,3 +383,12 @@ footer {
 }
 
 
+#monedaTipo {
+	border-radius: 2px;
+	position: relative;
+	border: solid  1px #5c5c5c;
+	width: 120px;
+	overflow: hidden;
+	background-color: #ffc61a;
+  }
+	
