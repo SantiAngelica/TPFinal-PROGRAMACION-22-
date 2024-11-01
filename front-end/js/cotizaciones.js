@@ -1,6 +1,7 @@
 
 const boxTarjetas = document.getElementById('box-tarjetas')
 import { capitalizarPrimeraLetra } from "./mayusFirst.js";
+import { obtenerFechaFormateada } from "./fecha.js";
 
 
 
