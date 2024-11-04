@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import requests
+from clases import  Tipo 
+from clases import  Cotizacion 
 app = Flask(__name__)
 CORS(app)
 
@@ -10,7 +12,12 @@ def cotizaciones():
          response = requests.get("https://dolarapi.com/v1/cotizaciones")
          if response.status_code == 200:
              datos = response.json()
-             return jsonify(datos)
+             cotizacion = []
+             for moneda in datos:
+                   cotizacion = Cotizacion(moneda["compra"], moneda["venta"], moneda["fechaActualizacion"])
+                   tipomoneda = Tipo(moneda["moneda"], moneda["casa"],moneda["cotizacion"])
+                   cotizacion.append(tipomoneda)
+             return jsonify(cotizacion)
          else:
             return jsonify({"error": "No se pudo obtener los datos"}), response.status_code
     except requests.exceptions.RequestException as e:
