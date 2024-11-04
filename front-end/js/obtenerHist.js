@@ -1,15 +1,10 @@
-export const obtenerDatosDolarAPI = async (moneda, limit) => {
+export const obtenerDatosDolarAPI = async (moneda, page) => {
 	try {
-		const request = await fetch(`https://api.argentinadatos.com/v1/cotizaciones/dolares/${moneda}`, {
+		const request = await fetch(`http://127.0.0.1:8080/api/historico/${moneda}?page=${page}`, {
 			method: 'GET',
 		});
 		const response = await request.json();
-
-		if (response.length <= limit) {
-			return response;
-		} else {
-			return response.slice(-limit);
-		}
+		return response
 	} catch (error) {
 		console.error(error);
 	}

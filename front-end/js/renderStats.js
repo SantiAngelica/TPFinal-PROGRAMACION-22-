@@ -15,7 +15,7 @@ export const calcularValorMaximo = (arr, grafico) => {
 };
 
 export const renderizarEstadisticas = async (dolarData) => {
-	dolarData.reverse()
+
 	cargarFilas(dolarData)
 	const maxValueVenta = await calcularValorMaximo(dolarData, 'venta');
 	mostrarEscalaValores(maxValueVenta, 'venta');

@@ -36,7 +36,6 @@ export const mostrarEscalaValores = (maxValue, grafico) => {
 };
 
 export const mostrarColumnasHistograma = (dolarData, maxValue, grafico) => {
-    console.log(grafico)
 	for (let i = 0; i < dolarData.length; i++) {
 		// Defino el elemento columna y le agrego los estilos
 		const histogramaColumn = document.createElement('div');
