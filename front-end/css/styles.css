@@ -18,6 +18,8 @@ a {
 	color: white;
 	border: none;
 	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1rem;
 }
 
 html {
@@ -31,16 +33,16 @@ body {
 	flex-direction: column;
 	min-height: 100%;
 }
+
 .nav-item {
-	margin-right: 30px;
-	padding: 10px;
+	padding: 1rem;
 }
 
 .navbar {
-	height: 70px;
-	padding: 10px;
+	padding: 0.5rem 1rem;
 	background-color: #24242405;
 }
+
 .navbar-collapse {
 	width: fit-content;
 	right: 0;
@@ -51,6 +53,13 @@ body {
 	align-items: center;
 	justify-content: flex-end;
 }
+
+.navbar-brand {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .container-navbar {
 	display: flex;
 	justify-content: space-between;
@@ -58,6 +67,10 @@ body {
 
 .btn {
 	color: white;
+}
+
+.nav-link {
+	font-size: 1rem;
 }
 
 .nav-link:hover {
@@ -90,7 +103,7 @@ footer {
 	color: black;
 }
 .logo {
-	font-size: 50px;
+	font-size: 3rem;
 	color: #ffc61a;
 }
 
@@ -106,9 +119,91 @@ footer {
 	grid-gap: 2rem;
 }
 
+@media (max-width: 1024px) {
+	main {
+		padding: 1rem 3rem;
+	}
+
+	.logo {
+		font-size: 2rem;
+	}
+
+	.nav-item {
+		padding: 0.75rem;
+	}
+
+	.nav-link {
+		font-size: 0.85rem;
+	}
+
+	.btn-mail {
+		padding: 0.5rem 0.75rem;
+		border-radius: 0.5rem;
+		font-size: 0.85rem;
+	}
+
+	.tarjetas {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	main {
+		padding: 1rem 1.5rem;
+	}
+
+	.logo {
+		font-size: 1.75rem;
+	}
+
+	.nav-item {
+		padding: 0.5rem;
+	}
+
+	.nav-link {
+		font-size: 0.75rem;
+	}
+
+	.btn-mail {
+		padding: 0.5rem 0.75rem;
+		border-radius: 0.5rem;
+		font-size: 0.75rem;
+	}
+
+	.tarjetas {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 480px) {
+	main {
+		padding: 2rem 1rem;
+	}
+
+	.logo {
+		width: 1rem;
+	}
+
+	.nav-item {
+		padding: 0.25rem 0.5rem;
+	}
+
+	.nav-link {
+		font-size: 0.65rem;
+	}
+
+	.btn-mail {
+		font-size: 0.65rem;
+	}
+
+	.tarjetas {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
 .tarjeta {
 	background-color: #f8f8f8;
-	padding: 1.5rem 1.5rem 6rem;
+	padding: 1.5rem 1.5rem 1rem;
 	border-radius: 2rem;
 	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 	display: flex;
@@ -129,7 +224,7 @@ footer {
 	padding: 0.25rem 0.5rem;
 }
 .nombre_tarjeta {
-	padding: 3rem 0 1rem;
+	margin: 2rem 0 0.5rem;
 	line-height: 1.1;
 }
 
@@ -147,9 +242,15 @@ footer {
 
 .valores {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	padding-top: 0.5rem;
+	border-top: 1px solid rgb(210, 203, 203);
 }
 
+.valores div {
+	margin-bottom: 10px;
+	
+}
 .compra {
 	display: flex;
 	flex-direction: column;
@@ -185,3 +286,100 @@ footer {
 	width: 100%;
 	height: 100%;
 }
+
+.active {
+	background-color: #fada791f;
+	border-radius: 10px;
+}
+.active:hover a {
+	color: black;
+}
+.logo {
+	font-size: 50px;
+	color: #ffc61a;
+}
+
+.formulario-mail {
+	display: flex;
+	flex-direction: column;
+}
+
+.modal_container {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+.modal {
+	background-color: white;
+	z-index: 2;
+	width: 700px;
+	height: fit-content;
+	border-top: 15px solid #ffc61a;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.305);
+	border-radius: 15px;
+	padding: 20px;
+	.modal_header {
+		display: flex;
+		justify-content: space-between;
+		h2 {
+			font-weight: 900;
+			color: black;
+		}
+		.btn-close {
+			cursor: pointer;
+			&:hover {
+				color: #ffc61a;
+			}
+		}
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		margin-top: 15px;
+		button {
+			width: fit-content;
+			background-color: #ffc61a;
+			font-weight: 500;
+			border: none;
+			border-radius: 10px;
+			color: white;
+			font-size: 1rem;
+			padding: 5px 20px;
+			margin-top: 30px;
+			cursor: pointer;
+		}
+		input {
+			margin-top: 10px;
+			border: 1px solid rgba(0, 0, 0, 0.092);
+			height: 25px;
+			border-radius: 10px;
+			padding: 7px;
+			font-weight: bold;
+			&:hover {
+				border: 2px solid #ffc61a;
+			}
+			&:focus {
+				border: 2px solid #ffc61a;
+				outline: none;
+			}
+		}
+		label {
+			font-weight: 100;
+			color: #000000a9;
+		}
+	}
+}
+
+
+.nombre_moneda{
+	font-size: .8rem;
+	color: #515151;
+}
+
+
