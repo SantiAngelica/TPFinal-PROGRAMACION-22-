@@ -1,7 +1,8 @@
 body {
 	font-family: sans-serif;
 }
-main{
+
+main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -80,15 +81,15 @@ main{
 	cursor: pointer;
 }
 
-h2{
+h2 {
 	text-align: center;
 }
 
-.container-tabla{
-	margin-top: 50px ;
+.container-tabla {
+	margin-top: 50px;
 }
 
-.historico_dolar{
+.historico_dolar {
 	margin-bottom: 20px;
 }
 
@@ -98,25 +99,67 @@ h2{
 	font-family: Arial, sans-serif;
 	font-size: 16px;
 	text-align: left;
-	
-  }
-  .tabla_valores thead tr {
-	background-color:#ffc61a;
+
+}
+
+.tabla_valores thead tr {
+	background-color: #ffc61a;
 	color: #ffffff;
 	font-weight: bold;
-  }
-  
-  .tabla_valores th, .tabla_valores td {
+}
+
+.tabla_valores th,
+.tabla_valores td {
 	padding: 12px 15px;
 	border-bottom: 1px solid #dddddd;
 	width: 200px;
 	height: 40px;
-  }
-  
-  .tabla_valores tbody tr:hover {
+}
+
+.tabla_valores tbody tr:hover {
 	background-color: #ffc61a48;
-  }
-  
-  .tabla_valores tbody tr:last-of-type {
+}
+
+.tabla_valores tbody tr:last-of-type {
 	border-bottom: 2px solid #ffc61a;
-  }
+}
+
+.button-pages-container{
+	display: flex;
+	align-items: center;
+	width: 70%;
+	justify-content: space-between;
+}
+.button-pages{
+	background-color: white;
+	border: 1px solid #ffc61a;
+	height: fit-content;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	cursor: pointer;
+	padding: 0px 10px;
+	border-radius: 20px;
+	width: 300px;
+	color: #ffc61a;
+	&:hover{
+		background-color: #ffc61a;
+		color:  white;
+		i{
+			color: white;
+		}
+	}
+	i{
+		font-size: 1.5rem;
+		color: #ffc61a;
+	}
+}
+
+#last-button{
+	position: absolute;
+	left: 200px;
+}
+#next-button{
+	position: absolute;
+	right: 200px;
+}

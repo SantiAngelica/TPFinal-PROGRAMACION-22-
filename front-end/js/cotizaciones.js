@@ -1,13 +1,14 @@
 
 const boxTarjetas = document.getElementById('box-tarjetas')
 import { capitalizarPrimeraLetra } from "./mayusFirst.js";
+import { obtenerFechaFormateada } from "./fecha.js";
 
 
 
 
 
     
-fetch("https://dolarapi.com/v1/cotizaciones")
+fetch("http://127.0.0.1:8080/api/cotizaciones")
     .then(response => response.json())
     .then(results => {
     results.forEach(moneda => {
