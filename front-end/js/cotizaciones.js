@@ -8,11 +8,7 @@ fetch("http://127.0.0.1:8080/api/cotizaciones")
     .then(response => response.json())
     .then(results => {
     results.forEach(moneda => {
-      if(moneda.fechaActualizacion == Date.now()){
-        console.log("actualizado")
-      } else {
-        console.log(moneda.fechaActualizacion, Date.now())
-      }
+    
       const newMoneda = document.createElement('div');
       newMoneda.classList.add('tarjeta');
       newMoneda.innerHTML = `

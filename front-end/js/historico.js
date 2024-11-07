@@ -10,6 +10,11 @@ const lastDate = document.getElementById('last-date')
 let ACTUAL_COIN
 let ACTUAL_PAGE
 
+export function obtenerPagina(){
+    return {ACTUAL_COIN, ACTUAL_PAGE}
+}
+
+
 const manager = async (moneda, page) => {
     console.log(moneda, page)
     dolarData = await obtenerDatosDolarAPI(moneda, page)
