@@ -66,10 +66,17 @@ def historico(moneda):
 @app.route('/api/enviarmail/<string:email>', methods=['POST'])
 def enviarEmail(email):
     data = request.json  
-    pedido = data.get("pedido")
-
+    coin = data.get("coin")
+    page = data.get("page")
     try:
-        respuestaEnvio = sendEmail(email, "Equipo de COTIZACIONES", pedido)
+        if coin == "cotizaciones":
+             cotizaciones_response = requests.get(f"http://127.0.0.1:8080/api/cotizaciones")
+             data = cotizaciones_response.json()
+        else:
+            historico_response = requests.get(f"http://127.0.0.1:8080/api/historico/{coin}", params={"page": page})
+            data = historico_response.json()
+
+        respuestaEnvio = sendEmail(email, "Equipo de COTIZACIONES", data)
         return ("ENVIADO!", respuestaEnvio)
     except:
         return jsonify({"error":"error de conexion"}), 500

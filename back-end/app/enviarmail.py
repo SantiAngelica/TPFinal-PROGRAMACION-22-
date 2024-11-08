@@ -1,6 +1,6 @@
 import requests
 import json 
-from flask import jsonify
+
 
 
 def sendEmail(to_name, from_name, data_message):
@@ -12,7 +12,8 @@ def sendEmail(to_name, from_name, data_message):
         'template_params': {
             'from_name': from_name,
             'to_name': to_name,
-            'message': json.dumps(data_message)
+            'message': json.dumps(data_message),
+            'to_email': to_name
         }
     }
 
