@@ -1,24 +1,23 @@
-const boxTarjetas = document.getElementById('box-tarjetas')
+const boxTarjetas = document.getElementById('box-tarjetas-dolares')
 import { capitalizarPrimeraLetra } from "./mayusFirst.js";
 import { verificarFechaActualizada } from "./checkFecha.js";
 
 
-    
-fetch("http://127.0.0.1:8080/api/cotizaciones")
+
+fetch("http://127.0.0.1:8080/api/dolares")
     .then(response => response.json())
     .then(results => {
-    results.forEach(moneda => {
-      console.log(moneda)
-      const newMoneda = document.createElement('div');
-      newMoneda.classList.add('tarjeta');
-      const fechaAct = verificarFechaActualizada(moneda.cotizacion.fechaActualizacion)
-      newMoneda.innerHTML = `
+        results.forEach(moneda => {
+            const newMoneda = document.createElement('div');
+            newMoneda.classList.add('tarjeta');
+            const fechaAct = verificarFechaActualizada(moneda.cotizacion.fechaActualizacion)
+            newMoneda.innerHTML = `
         <div class=${fechaAct ? "actualizado" : "noActualizado"}>
             <span>${fechaAct ? "Actualizado" : "No actualizado"}</span>
         </div>
         <div class="nombre_tarjeta">
-            <p class="nombre_casa">${capitalizarPrimeraLetra(moneda.tipo.casa)}</p>
-            <h2 class="moneda">${moneda.tipo.moneda}</h2>
+            <p class="nombre_casa">${moneda.tipo.moneda}</p>
+            <h2 class="moneda">${capitalizarPrimeraLetra(moneda.tipo.casa) == 'Contadoconliqui' ? 'Liquidacion' : capitalizarPrimeraLetra(moneda.tipo.casa)}</h2>
             <p class="nombre_moneda">${moneda.tipo.nombre}</p>
         </div>
         <div class="valores">
@@ -36,8 +35,8 @@ fetch("http://127.0.0.1:8080/api/cotizaciones")
             </div>
         </div>
       `;
-      boxTarjetas.appendChild(newMoneda);
-    });
-  }).catch(error => {
-    console.error('Error al obtener los datos:', error);
-  })
+            boxTarjetas.appendChild(newMoneda);
+        });
+    }).catch(error => {
+        console.error('Error al obtener los datos:', error);
+    })

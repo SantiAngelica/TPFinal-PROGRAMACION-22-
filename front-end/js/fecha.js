@@ -34,3 +34,4 @@ export const obtenerFechaFormateada = function (fechaSinFormatear) {
 	return fechaFormateada;
 };
 
+

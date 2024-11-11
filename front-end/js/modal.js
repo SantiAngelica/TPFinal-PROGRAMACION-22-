@@ -59,7 +59,9 @@ btnEnviar.addEventListener('click', async () => {
             let { ACTUAL_COIN, ACTUAL_PAGE } = obtenerPagina()
             await POSTalMail(ACTUAL_COIN, ACTUAL_PAGE)
         }
-
+        if(location == '/front-end/html/dolares.html'){
+            await POSTalMail("dolares", null)
+        }
 
     }
 })
