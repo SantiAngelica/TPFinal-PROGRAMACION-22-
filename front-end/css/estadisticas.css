@@ -21,13 +21,14 @@ main {
 
 .histograma {
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
+	justify-content: center;
 	height: 300px;
-	width: auto;
+	width: 100%;
 	column-gap: 0.25rem;
 	background-color: #f6f6f6;
 	overflow-x: auto;
-	padding: 2rem 200px;
+	padding: 2rem 10rem;
 	margin: 30px 0;
 }
 
@@ -38,7 +39,6 @@ main {
 	flex-shrink: 0;
 	background-color: #ffc61a;
 }
-
 
 .histograma_toast {
 	position: absolute;
@@ -99,7 +99,6 @@ h2 {
 	font-family: Arial, sans-serif;
 	font-size: 16px;
 	text-align: left;
-
 }
 
 .tabla_valores thead tr {
@@ -124,42 +123,139 @@ h2 {
 	border-bottom: 2px solid #ffc61a;
 }
 
-.button-pages-container{
+.moneda-selector {
+	margin-top: 1rem;
+}
+
+.button-pages-container {
 	display: flex;
+
 	align-items: center;
-	width: 70%;
+
 	justify-content: space-between;
 }
-.button-pages{
+
+.button-pages {
 	background-color: white;
 	border: 1px solid #ffc61a;
 	height: fit-content;
 	display: flex;
-	justify-content: space-around;
+	column-gap: 0.75rem;
 	align-items: center;
 	cursor: pointer;
-	padding: 0px 10px;
-	border-radius: 20px;
-	width: 300px;
+	padding: 0.25rem 1rem;
+	border-radius: 1.25rem;
+
 	color: #ffc61a;
-	&:hover{
+	&:hover {
 		background-color: #ffc61a;
-		color:  white;
-		i{
+		color: white;
+		i {
 			color: white;
 		}
 	}
-	i{
+	i {
 		font-size: 1.5rem;
 		color: #ffc61a;
 	}
 }
 
-#last-button{
+#last-button {
 	position: absolute;
 	left: 200px;
 }
-#next-button{
+#next-button {
 	position: absolute;
 	right: 200px;
+}
+
+@media (max-width: 1024px) {
+	.button-pages-container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+		align-items: center;
+
+		justify-content: space-between;
+	}
+
+	#last-button {
+		position: initial;
+	}
+	#next-button {
+		position: initial;
+	}
+}
+
+@media (max-width: 768px) {
+	.tabla_valores {
+		font-size: 0.75rem;
+		text-align: center;
+	}
+
+	.tabla_valores th,
+	.tabla_valores td {
+		padding: 0.5rem 0.75rem;
+		border-bottom: 1px solid #dddddd;
+		width: 300px;
+	}
+
+	.button-pages-container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+	}
+
+	#last-button {
+		position: initial;
+	}
+	#next-button {
+		position: initial;
+	}
+
+	.histograma {
+		align-items: flex-end;
+		justify-content: flex-start;
+	}
+
+	.histograma_column {
+		width: 1rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.histograma_column {
+		width: 1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.tabla_valores {
+		font-size: 0.75rem;
+		text-align: center;
+	}
+
+	.tabla_valores th,
+	.tabla_valores td {
+		padding: 0.5rem 0.75rem;
+		border-bottom: 1px solid #dddddd;
+		width: 300px;
+	}
+
+	.button-pages-container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+	}
+
+	#last-button {
+		position: initial;
+	}
+	#next-button {
+		position: initial;
+	}
+
+	.histograma_column {
+		width: 0.5remrem;
+	}
 }
