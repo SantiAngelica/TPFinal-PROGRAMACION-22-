@@ -21,13 +21,14 @@ main {
 
 .histograma {
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
+	justify-content: center;
 	height: 300px;
-	width: auto;
+	width: 100%;
 	column-gap: 0.25rem;
 	background-color: #f6f6f6;
 	overflow-x: auto;
-	padding: 2rem 200px;
+	padding: 2rem 10rem;
 	margin: 30px 0;
 }
 
@@ -211,6 +212,21 @@ h2 {
 	#next-button {
 		position: initial;
 	}
+
+	.histograma {
+		align-items: flex-end;
+		justify-content: flex-start;
+	}
+
+	.histograma_column {
+		width: 1rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.histograma_column {
+		width: 1rem;
+	}
 }
 
 @media (max-width: 480px) {
@@ -237,5 +253,9 @@ h2 {
 	}
 	#next-button {
 		position: initial;
+	}
+
+	.histograma_column {
+		width: 0.5remrem;
 	}
 }
