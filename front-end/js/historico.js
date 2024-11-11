@@ -16,7 +16,6 @@ export function obtenerPagina(){
 
 
 const manager = async (moneda, page) => {
-    console.log(moneda, page)
     dolarData = await obtenerDatosDolarAPI(moneda, page)
     actualizarBotones(dolarData)
 	await renderizarEstadisticas(dolarData.payload);
@@ -42,8 +41,6 @@ lastButton.addEventListener('click',async  () => {
 })
 
 
-
-//carga dolar oficial al principio, despues corresponde al 
 document.addEventListener('DOMContentLoaded', async () => {
     ACTUAL_COIN = "oficial"
     ACTUAL_PAGE = 1
