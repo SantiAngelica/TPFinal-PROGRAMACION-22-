@@ -430,4 +430,12 @@ footer {
 	width: 120px;
 	overflow: hidden;
 	background-color: #ffc61a;
+<<<<<<< HEAD
 }
+=======
+  }
+.contactos {
+	padding: 3em 3em;
+	background-color: #ffc61a;
+}	
+>>>>>>> fd59a69f4a162d8b38fb2d44a4052861c2903475
