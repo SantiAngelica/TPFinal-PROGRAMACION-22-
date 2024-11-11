@@ -77,10 +77,16 @@ body {
 	color: #ffc61a;
 }
 
+.footer {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+}
+
 .li-footer {
+	font-size: 1rem;
 	text-align: center;
 	list-style: none;
-	margin-bottom: 10px;
 }
 
 main {
@@ -88,8 +94,7 @@ main {
 }
 
 footer {
-	padding-top: 15px;
-	margin-top: auto;
+	padding: 2rem 1rem;
 	display: flex;
 	justify-content: center;
 	background-color: #24242405;
@@ -124,6 +129,10 @@ footer {
 		padding: 1rem 3rem;
 	}
 
+	footer {
+		padding: 1rem 3rem;
+	}
+
 	.logo {
 		font-size: 2rem;
 	}
@@ -143,12 +152,20 @@ footer {
 	}
 
 	.tarjetas {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.li-footer {
+		font-size: 0.85rem;
 	}
 }
 
 @media (max-width: 768px) {
 	main {
+		padding: 1rem 1.5rem;
+	}
+
+	footer {
 		padding: 1rem 1.5rem;
 	}
 
@@ -173,10 +190,26 @@ footer {
 	.tarjetas {
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	.footer {
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.75rem;
+	}
+
+	.li-footer {
+		font-size: 0.75rem;
+		text-align: center;
+		list-style: none;
+	}
 }
 
 @media (max-width: 480px) {
 	main {
+		padding: 2rem 1rem;
+	}
+
+	footer {
 		padding: 2rem 1rem;
 	}
 
@@ -198,6 +231,16 @@ footer {
 
 	.tarjetas {
 		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.footer {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+	}
+
+	.li-footer {
+		font-size: 0.65rem;
 	}
 }
 
@@ -249,7 +292,6 @@ footer {
 
 .valores div {
 	margin-bottom: 10px;
-	
 }
 .compra {
 	display: flex;
@@ -376,19 +418,16 @@ footer {
 	}
 }
 
-
-.nombre_moneda{
-	font-size: .8rem;
+.nombre_moneda {
+	font-size: 0.8rem;
 	color: #515151;
 }
-
 
 #monedaTipo {
 	border-radius: 2px;
 	position: relative;
-	border: solid  1px #5c5c5c;
+	border: solid 1px #5c5c5c;
 	width: 120px;
 	overflow: hidden;
 	background-color: #ffc61a;
-  }
-	
+}
