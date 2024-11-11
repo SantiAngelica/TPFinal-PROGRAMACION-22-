@@ -75,7 +75,6 @@
 							<th>Compra (ARS)</th>
 							<th>Venta (ARS)</th>
 							<th>Fecha de actualizacion</th>
-							<th>Estado</th>
 						</tr>
 					</thead>
 					<tbody id="table_hist">
@@ -120,15 +119,26 @@
 			</div>
 			<form>
 				<label>Ingrese su email:</label>
-				<input></input>
-				<button type="button">ENVIAR</button>
+				<input id="input_email" type="email"></input>
+				<button type="button" id="enviar_pedido">ENVIAR</button>
 			</form>
 		</div>
 	</div>
 
+	<div class="modal_container" id="modal_container_mail">
+		<div class="modal">
+			<div class="modal_header">
+				<h2>¡Mail enviado correctamente!</h2>
+				<i class="fa-solid fa-xmark btn-close" id="btn_close"></i>
+			</div>
+		</div>
+	</div>
+
+
+
 
 	<script src="https://kit.fontawesome.com/e7d1877029.js" crossorigin="anonymous"></script>
-	<script src="../js/modal.js"></script>
+	<script type="module" src="../js/modal.js"></script>
 	<script type="module" src="../js/historico.js"></script>
 
 </body>

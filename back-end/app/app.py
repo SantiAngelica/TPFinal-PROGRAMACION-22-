@@ -3,6 +3,7 @@ from flask_cors import CORS
 import requests
 from clases import  Tipo 
 from clases import  Cotizacion 
+from enviarmail import sendEmail
 app = Flask(__name__)
 CORS(app)
 
@@ -60,6 +61,27 @@ def historico(moneda):
             return jsonify({"error": "No se pudo obtener los datos"}), response.status_code
     except requests.exceptions.RequestException as e:
             return jsonify({"error": "Error de conexión"}), 500
+
+
+@app.route('/api/enviarmail/<string:email>', methods=['POST'])
+def enviarEmail(email):
+    data = request.json  
+    coin = data.get("coin")
+    page = data.get("page")
+    try:
+        if coin == "cotizaciones":
+             cotizaciones_response = requests.get(f"http://127.0.0.1:8080/api/cotizaciones")
+             data = cotizaciones_response.json()
+        else:
+            historico_response = requests.get(f"http://127.0.0.1:8080/api/historico/{coin}", params={"page": page})
+            data = historico_response.json()
+
+        respuestaEnvio = sendEmail(email, "Equipo de COTIZACIONES", data)
+        return ("ENVIADO!", respuestaEnvio)
+    except:
+        return jsonify({"error":"error de conexion"}), 500
+
+    
 
 
 

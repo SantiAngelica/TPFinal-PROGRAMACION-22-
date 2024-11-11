@@ -11,7 +11,6 @@ export function cargarFilas(dolarData) {
 			<td>${e.compra}</td>
 			<td>${e.venta}</td>
 			<td>${e.fecha}</td>
-			<td>-</td>
 		`
         tableHist.append(tr)
     });
