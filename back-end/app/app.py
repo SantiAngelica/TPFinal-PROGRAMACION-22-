@@ -103,6 +103,7 @@ def enviarEmail(email):
             historico_response = requests.get(f"http://127.0.0.1:8080/api/historico/{coin}", params={"page": page})
             data = historico_response.json()
 
+        print(data)
         respuestaEnvio = sendEmail(email, "Equipo de COTIZACIONES", data)
         return ("ENVIADO!", respuestaEnvio)
     except:

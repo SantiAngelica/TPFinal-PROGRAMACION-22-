@@ -35,13 +35,8 @@ body {
 	flex-direction: column;
 	min-height: 100%;
 }
-
 footer {
 	margin-top: auto;
-}
-
-.nav-item {
-	padding: 1rem;
 }
 
 .navbar {
@@ -59,6 +54,7 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	column-gap: 1rem;
 }
 
 .navbar-brand {
@@ -74,6 +70,10 @@ footer {
 
 .btn {
 	color: white;
+}
+
+.nav-item {
+	padding: 0.5rem;
 }
 
 .nav-link {
@@ -146,8 +146,8 @@ footer {
 		font-size: 2rem;
 	}
 
-	.nav-item {
-		padding: 0.75rem;
+	.navbar-nav {
+		column-gap: 0.75rem;
 	}
 
 	.nav-link {
@@ -182,8 +182,12 @@ footer {
 		font-size: 1.75rem;
 	}
 
+	.navbar-nav {
+		column-gap: 0.25rem;
+	}
+
 	.nav-item {
-		padding: 0.5rem;
+		padding: 0.25rem;
 	}
 
 	.nav-link {
@@ -226,8 +230,12 @@ footer {
 		width: 1rem;
 	}
 
+	.navbar-nav {
+		column-gap: 0.25rem;
+	}
+
 	.nav-item {
-		padding: 0.25rem 0.5rem;
+		padding: 0.25rem;
 	}
 
 	.nav-link {
@@ -316,7 +324,6 @@ footer {
 
 .valores div {
 	margin-bottom: 10px;
-
 }
 
 .compra {
@@ -389,6 +396,7 @@ footer {
 	height: 100%;
 	align-items: center;
 	justify-content: center;
+	padding: 1rem;
 }
 
 .modal {
@@ -466,7 +474,7 @@ footer {
 	font-size: 0.8rem;
 
 	.nombre_moneda {
-		font-size: .8rem;
+		font-size: 0.8rem;
 		color: #515151;
 	}
 
@@ -479,9 +487,6 @@ footer {
 		overflow: hidden;
 		background-color: #ffc61a;
 	}
-
-
-
 }
 
 .mail-des {
@@ -493,26 +498,23 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	padding: 20px 0px 10px 0px;
-
-
 }
 
 .formulario {
-
 	display: flex;
 	padding: 10px 0px 20px 0px;
 	flex-direction: column;
 	align-items: center;
-	form{
+	form {
 		display: flex;
 		flex-direction: column;
 		margin-top: 10px;
 	}
-	label{
+	label {
 		margin-top: 10px;
 	}
-	input, textarea {
-		
+	input,
+	textarea {
 		border: 1px solid rgba(0, 0, 0, 0.092);
 		height: 25px;
 		border-radius: 10px;
@@ -528,8 +530,7 @@ footer {
 			outline: none;
 		}
 	}
-	textarea{
-		
+	textarea {
 		height: 200px;
 	}
 }
@@ -538,7 +539,6 @@ footer {
 	font-size: 30px;
 	color: #25d366;
 	margin-top: 10px;
-
 }
 
 .boton-form {
@@ -562,9 +562,9 @@ footer {
 .box-contacto {
 	border-radius: 40px;
 	background-color: #ffc61a;
-	height: fit-content
+	height: fit-content;
 }
 
-#mensaje-enviado{
+#mensaje-enviado {
 	color: white;
 }
