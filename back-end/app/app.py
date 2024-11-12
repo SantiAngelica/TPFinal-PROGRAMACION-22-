@@ -109,7 +109,17 @@ def enviarEmail(email):
     except:
         return jsonify({"error":"error de conexion"}), 500
 
-    
+@app.route('/api/contacto', methods=['POST'])
+def contacto():
+    nombre = request.json.get('nombre')
+    email = request.json.get('email')
+    informacion = request.json.get('info')
+    try:
+        print(informacion)
+        respuestaEnvio = sendEmail('santiangelica410@gmail.com', f"{nombre} - {email}", informacion, 'contacto')
+        return ("Formulario enviado correctamente")
+    except:
+        return jsonify({"error":"error de conexion"}), 500
 
 
 

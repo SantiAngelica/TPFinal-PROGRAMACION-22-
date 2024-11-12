@@ -3,19 +3,30 @@ import json
 
 
 
-def sendEmail(to_name, from_name, data_message):
+def sendEmail(to_name, from_name, data_message, type):
+    if type == 'contacto':
+        data = {
+            'service_id': 'service_nvzvfma',
+            'template_id': 'template_bd6n0xv',
+            'user_id': 'I5pi9Kd9YATpJPYBB',
+            'template_params': {
+                'from_name': from_name,
+                'message': data_message,
 
-    data = {
-        'service_id': 'service_nvzvfma',
-        'template_id': 'template_uimixqs',
-        'user_id': 'I5pi9Kd9YATpJPYBB',
-        'template_params': {
-            'from_name': from_name,
-            'to_name': to_name,
-            'message': json.dumps(data_message),
-            'to_email': to_name
+            }
         }
-    }
+    else:
+        data = {
+            'service_id': 'service_nvzvfma',
+            'template_id': 'template_uimixqs',
+            'user_id': 'I5pi9Kd9YATpJPYBB',
+            'template_params': {
+                'from_name': from_name,
+                'to_name': to_name,
+                'message': json.dumps(data_message),
+                'to_email': to_name
+            }
+        }
 
     headers = {
         'Content-Type': 'application/json',

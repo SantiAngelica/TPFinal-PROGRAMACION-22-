@@ -12,6 +12,7 @@ const actualizarContenedor = grafico => {
 
 export const mostrarEscalaValores = (maxValue, grafico) => {
     actualizarContenedor(grafico)
+
     histograma.innerHTML = ''
 	const escalaDeValoresContenedor = document.createElement('div');
 	escalaDeValoresContenedor.classList.add('escala_valores_contenedor');

@@ -48,48 +48,53 @@
   </header>
 
   <main>
-    <div class="contactos">
-      <h1>
-        Contactanos
-      </h1><br>
-      <p>En caso de querer contactarnos por correo: cotizacionesarg@gmail.com </p> <br>
-      <p>Mensajes directos por WhatsApp <a class="" href="https://wa.link/74az8k">aqui</a></p><br>
-    </div>
-    <div class="formulario">
-      <h2>Ingrese sus datos y lo contactaremos</h2><br>
-      <form action="/submit" method="post" >
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" name="nombre" id="nombre"><br><br>
+    <div class="box-contacto">
+      <div class="contactos">
+        <h1>
+          Contactanos
+        </h1>
+        <p>En caso de querer contactarnos por correo: cotizacionesarg@gmail.com </p> <br>
+        <p>Mensajes directos por WhatsApp:
+        </p>
+        <a class="" href="https://wa.link/74az8k" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+      <div class="formulario">
+        <h2>Ingrese sus datos y lo contactaremos</h2>
+        <form id="formulario-contacto">
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="nombre" id="nombre">
 
-        <label for="email">Correo Eletronico</label><br>
-        <input type="email" id="email"><br><br>
-        <p>Ingrese informacion detallada.</p>
-        <textarea name="textarea" id=""></textarea><br>
-
-        <button type="submit">Enviar</button>
-      </form>
+          <label for="email">Correo Eletronico:</label>
+          <input type="email" id="email">
+          <label for="info">Ingrese informacion detallada:</label>
+          <textarea name="info" id="info"></textarea>
+          
+          <button type="submit" class="boton-form">Enviar</button>
+          <p id="mensaje-enviado"></p>
+        </form>
+      </div>
     </div>
   </main>
 
 
   <footer>
-      <ul class="footer">
-            <li class="li-footer">
-              SANTIAGO ANGELICA - MAXIMILIANO PEREZ - SEBASTIAN ORTIGOZA - DAVID CASARES
-            </li>
-            <li class="li-footer">Programacion II - Tecnicatura Universitaria en Programacion UTN</li>
-            <li class="li-footer">
-              Los datos recopilados en el sitio web son propiedad de https://dolarapi.com/docs/
-            </li>
-            <li class="li-footer">
-              <a class="li-footer" href="contacto.html">Contactanos</a>
-            </li>
-      </ul>
+    <ul class="footer">
+      <li class="li-footer">
+        SANTIAGO ANGELICA - MAXIMILIANO PEREZ - SEBASTIAN ORTIGOZA - DAVID CASARES
+      </li>
+      <li class="li-footer">Programacion II - Tecnicatura Universitaria en Programacion UTN</li>
+      <li class="li-footer">
+        Los datos recopilados en el sitio web son propiedad de https://dolarapi.com/docs/
+      </li>
+      <li class="li-footer">
+        <a class="li-footer" href="contacto.html">Contactanos</a>
+      </li>
+    </ul>
   </footer>
-
-
-
   <script src="https://kit.fontawesome.com/e7d1877029.js" crossorigin="anonymous"></script>
+  <script type="module" src="../js/contacto.js"></script>
 </body>
 
 </html>

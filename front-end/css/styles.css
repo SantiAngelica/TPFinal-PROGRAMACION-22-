@@ -39,10 +39,6 @@ footer {
 	margin-top: auto;
 }
 
-.nav-item {
-	padding: 1rem;
-}
-
 .navbar {
 	padding: 0.5rem 1rem;
 	background-color: #24242405;
@@ -58,6 +54,7 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	column-gap: 1rem;
 }
 
 .navbar-brand {
@@ -73,6 +70,10 @@ footer {
 
 .btn {
 	color: white;
+}
+
+.nav-item {
+	padding: 0.5rem;
 }
 
 .nav-link {
@@ -145,8 +146,8 @@ footer {
 		font-size: 2rem;
 	}
 
-	.nav-item {
-		padding: 0.75rem;
+	.navbar-nav {
+		column-gap: 0.75rem;
 	}
 
 	.nav-link {
@@ -181,8 +182,12 @@ footer {
 		font-size: 1.75rem;
 	}
 
+	.navbar-nav {
+		column-gap: 0.25rem;
+	}
+
 	.nav-item {
-		padding: 0.5rem;
+		padding: 0.25rem;
 	}
 
 	.nav-link {
@@ -225,8 +230,12 @@ footer {
 		width: 1rem;
 	}
 
+	.navbar-nav {
+		column-gap: 0.25rem;
+	}
+
 	.nav-item {
-		padding: 0.25rem 0.5rem;
+		padding: 0.25rem;
 	}
 
 	.nav-link {
@@ -479,15 +488,83 @@ footer {
 		background-color: #ffc61a;
 	}
 }
+
 .mail-des {
 	background-color: gray;
 }
+
 .contactos {
-	padding: 2em 3em;
-	background-color: #ffc61a;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px 0px 10px 0px;
 }
 
 .formulario {
-	padding: 2em 3em;
+	display: flex;
+	padding: 10px 0px 20px 0px;
+	flex-direction: column;
+	align-items: center;
+	form {
+		display: flex;
+		flex-direction: column;
+		margin-top: 10px;
+	}
+	label {
+		margin-top: 10px;
+	}
+	input,
+	textarea {
+		border: 1px solid rgba(0, 0, 0, 0.092);
+		height: 25px;
+		border-radius: 10px;
+		padding: 7px;
+		font-weight: bold;
+		width: 300px;
+		&:hover {
+			border: 2px solid #ffc61a;
+		}
+
+		&:focus {
+			border: 2px solid #ffc61a;
+			outline: none;
+		}
+	}
+	textarea {
+		height: 200px;
+	}
+}
+
+.fa-whatsapp {
+	font-size: 30px;
+	color: #25d366;
+	margin-top: 10px;
+}
+
+.boton-form {
+	padding: 10px;
+	width: 100px;
+	height: 40px;
+	background-color: white;
+	border: none;
+	margin: 10px 0px;
+	border-radius: 10px;
+	color: #ffc61a;
+
+	&:hover {
+		border: 2px solid white;
+		color: white;
+		background-color: #ffc61a;
+		cursor: pointer;
+	}
+}
+
+.box-contacto {
+	border-radius: 40px;
 	background-color: #ffc61a;
+	height: fit-content;
+}
+
+#mensaje-enviado {
+	color: white;
 }
