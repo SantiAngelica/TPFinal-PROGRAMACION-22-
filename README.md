@@ -1,5 +1,13 @@
-# Trabajo práctico integrador - Programación II
+# Proyecto Integrador
+*Programación II | Tecnicatura Universitaria en Programación | Universidad Tecnológica Nacional*
 
+El proyecto final de Programación II consiste en que los estudiantes desarrollen una
+página web completa utilizando las tecnologías HTML, CSS, JavaScript y Flask.
+Durante un período de 14 semanas, los alumnos trabajarán de manera progresiva
+para construir un sitio web funcional y estilizado, que demuestre su comprensión
+de los conceptos clave del desarrollo web frontend y backend. Este proyecto
+permitirá a los estudiantes aplicar sus conocimientos adquiridos a lo largo del
+curso, creando una aplicación web dinámica y personalizable.
 ## Tabla de contenidos
 
 - [Descripción General](#descripcion-general)
@@ -30,7 +38,7 @@ Requerimientos no funcionales:
 - El sitio web debe ser público (no requiere autenticación de usuarios) ✅
 - Cada consulta, reload, navegación entre páginas, debe durar menos de 0.5 segundos. ✅
 
-### Screenshot
+### Screenshots
 
 ![desktop-cotizaciones](public/assets/screenshots/cotizaciones_desktop.png)
 ![desktop-historico](public/assets/screenshots/historico_desktop.png)
