@@ -8,8 +8,10 @@
 li {
 	list-style: none;
 }
+
 a {
 	text-decoration: none;
+	color: black;
 }
 
 .btn-mail {
@@ -33,6 +35,9 @@ body {
 	flex-direction: column;
 	min-height: 100%;
 }
+footer {
+	margin-top: auto;
+}
 
 .nav-item {
 	padding: 1rem;
@@ -47,6 +52,7 @@ body {
 	width: fit-content;
 	right: 0;
 }
+
 .navbar-nav {
 	width: 100%;
 	display: flex;
@@ -101,12 +107,14 @@ footer {
 }
 
 .active {
-	background-color: #fada791f;
+	background-color: #fada79ea;
 	border-radius: 10px;
 }
+
 .active:hover a {
 	color: black;
 }
+
 .logo {
 	font-size: 3rem;
 	color: #ffc61a;
@@ -266,6 +274,21 @@ footer {
 	color: white;
 	padding: 0.25rem 0.5rem;
 }
+
+.noActualizado {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+
+	span {
+		font-size: 0.75rem;
+		background-color: #f01919;
+		border-radius: 2rem;
+		color: white;
+		padding: 0.25rem 0.5rem;
+	}
+}
+
 .nombre_tarjeta {
 	margin: 2rem 0 0.5rem;
 	line-height: 1.1;
@@ -293,33 +316,39 @@ footer {
 .valores div {
 	margin-bottom: 10px;
 }
+
 .compra {
 	display: flex;
 	flex-direction: column;
 	row-gap: 0.5rem;
 	flex: 1;
 }
+
 .venta {
 	display: flex;
 	flex-direction: column;
 	row-gap: 0.5rem;
 	flex: 1;
 }
+
 .actualizacion {
 	display: flex;
 	flex-direction: column;
 	row-gap: 0.5rem;
 	flex: 2;
 }
+
 .valor_etiqueta {
 	color: #8b8b8b;
 	font-size: 0.75rem;
 }
+
 .valor {
 	color: #353535;
 	font-weight: 700;
 	font-size: 0.75rem;
 }
+
 .estadisticas_contenedor {
 	width: 100vw;
 }
@@ -333,9 +362,11 @@ footer {
 	background-color: #fada791f;
 	border-radius: 10px;
 }
+
 .active:hover a {
 	color: black;
 }
+
 .logo {
 	font-size: 50px;
 	color: #ffc61a;
@@ -368,24 +399,30 @@ footer {
 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.305);
 	border-radius: 15px;
 	padding: 20px;
+
 	.modal_header {
 		display: flex;
 		justify-content: space-between;
+
 		h2 {
 			font-weight: 900;
 			color: black;
 		}
+
 		.btn-close {
 			cursor: pointer;
+
 			&:hover {
 				color: #ffc61a;
 			}
 		}
 	}
+
 	form {
 		display: flex;
 		flex-direction: column;
 		margin-top: 15px;
+
 		button {
 			width: fit-content;
 			background-color: #ffc61a;
@@ -398,6 +435,7 @@ footer {
 			margin-top: 30px;
 			cursor: pointer;
 		}
+
 		input {
 			margin-top: 10px;
 			border: 1px solid rgba(0, 0, 0, 0.092);
@@ -405,14 +443,17 @@ footer {
 			border-radius: 10px;
 			padding: 7px;
 			font-weight: bold;
+
 			&:hover {
 				border: 2px solid #ffc61a;
 			}
+
 			&:focus {
 				border: 2px solid #ffc61a;
 				outline: none;
 			}
 		}
+
 		label {
 			font-weight: 100;
 			color: #000000a9;
@@ -422,20 +463,31 @@ footer {
 
 .nombre_moneda {
 	font-size: 0.8rem;
-	color: #515151;
-}
 
-#monedaTipo {
-	border-radius: 2px;
-	position: relative;
-	border: solid 1px #5c5c5c;
-	width: 120px;
-	overflow: hidden;
+	.nombre_moneda {
+		font-size: 0.8rem;
+		color: #515151;
+	}
+
+	#monedaTipo {
+		border-radius: 2px;
+		position: relative;
+		border: solid 1px #5c5c5c;
+		border: solid 1px #5c5c5c;
+		width: 120px;
+		overflow: hidden;
+		background-color: #ffc61a;
+	}
+}
+.mail-des {
+	background-color: gray;
+}
+.contactos {
+	padding: 2em 3em;
 	background-color: #ffc61a;
 }
 
-/* CONTACTO */
-.contactos {
-	padding: 3em 3em;
+.formulario {
+	padding: 2em 3em;
 	background-color: #ffc61a;
 }
