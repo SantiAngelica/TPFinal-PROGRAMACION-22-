@@ -4,7 +4,7 @@ const modalContainerMail = document.getElementById('modal_container_mail')
 const btnClose = document.getElementById("btn_close")
 const email = document.getElementById('input_email')
 const btnEnviar = document.getElementById('enviar_pedido')
-import { obtenerDatosDolarAPI } from "./obtenerHist.js"
+
 
 
 

@@ -14,6 +14,7 @@ CORS(app)
 def cotizaciones():
     cotizacionArray = []
     try:
+
          response = requests.get("https://dolarapi.com/v1/cotizaciones")
          if response.status_code == 200:
              datos = response.json()
@@ -95,16 +96,19 @@ def enviarEmail(email):
     coin = data.get("coin")
     page = data.get("page")
     try:
+
         if coin == "cotizaciones":
-             data = cotizacionArray
+             cotizacionesData = requests.get("https://dolarapi.com/v1/cotizaciones")
+             data = cotizacionesData.json()
         elif coin == 'dolares':
-             data = dolaresArray
+             dolaresData = requests.get("https://dolarapi.com/v1/cotizaciones")
+             data = dolaresData.json()
         else:
             historico_response = requests.get(f"http://127.0.0.1:8080/api/historico/{coin}", params={"page": page})
             data = historico_response.json()
 
-        print(data)
-        respuestaEnvio = sendEmail(email, "Equipo de COTIZACIONES", data)
+
+        respuestaEnvio = sendEmail(email, "Equipo de COTIZACIONES", data, "")
         return ("ENVIADO!", respuestaEnvio)
     except:
         return jsonify({"error":"error de conexion"}), 500

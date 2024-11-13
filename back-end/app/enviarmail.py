@@ -3,8 +3,9 @@ import json
 
 
 
-def sendEmail(to_name, from_name, data_message, type):
-    if type == 'contacto':
+def sendEmail(to_name, from_name, data_message, typeMail):
+    print(to_name, from_name, data_message)
+    if typeMail == 'contacto':
         data = {
             'service_id': 'service_nvzvfma',
             'template_id': 'template_bd6n0xv',

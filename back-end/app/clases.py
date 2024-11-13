@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 
 class Moneda(ABC):
     def __init__(self, nombre, moneda):
-        #self.nombre = nombre
         self.set_nombre(nombre)
         self.set_moneda(moneda)
     

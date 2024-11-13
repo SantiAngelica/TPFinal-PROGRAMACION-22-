@@ -8,7 +8,7 @@ fetch("http://127.0.0.1:8080/api/cotizaciones")
     .then(response => response.json())
     .then(results => {
     results.forEach(moneda => {
-      console.log(moneda)
+  
       const newMoneda = document.createElement('div');
       newMoneda.classList.add('tarjeta');
       const fechaAct = verificarFechaActualizada(moneda.cotizacion.fechaActualizacion)
