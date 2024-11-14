@@ -31,7 +31,7 @@ fetch("http://127.0.0.1:8080/api/dolares")
             </div>
             <div class="actualizacion">
                 <p class="valor_etiqueta">Fecha actualización</p>
-                <p class="valor">${moneda.cotizacion.fechaActualizacion}</p>
+                <p class="valor">${moneda.cotizacion.fechaActualizacion.slice(0,10)}</p>
             </div>
         </div>
       `;

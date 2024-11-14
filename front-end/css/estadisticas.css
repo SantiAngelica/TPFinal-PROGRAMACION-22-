@@ -45,7 +45,6 @@ main {
 	top: -2rem;
 	left: 50%;
 	transform: translateX(-50%);
-	font-size: 1rem;
 	color: rgb(253, 253, 253);
 	background-color: rgb(44, 44, 44);
 	font-size: 0.75rem;

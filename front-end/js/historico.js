@@ -34,10 +34,12 @@ function actualizarBotones(data){
 
 
 nextButton.addEventListener('click',async  () => {
-    await manager(ACTUAL_COIN, ACTUAL_PAGE + 1)
+    ACTUAL_PAGE += 1
+    await manager(ACTUAL_COIN, ACTUAL_PAGE)
 })
 lastButton.addEventListener('click',async  () => {
-    await manager(ACTUAL_COIN, ACTUAL_PAGE - 1)
+    ACTUAL_PAGE -= 1
+    await manager(ACTUAL_COIN, ACTUAL_PAGE)
 })
 
 
