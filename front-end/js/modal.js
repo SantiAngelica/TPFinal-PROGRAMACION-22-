@@ -24,9 +24,6 @@ function ModalMail() {
 
 function desmontarModal() {
     modalContainer.style.display = "none"
-    document.body.style.position = "inherit"
-    document.body.style.height = "auto"
-    document.body.style.overflow = "visible"
 }
 
 async function POSTalMail( ACTUAL_COIN, ACTUAL_PAGE) {
@@ -69,11 +66,9 @@ btnEnviar.addEventListener('click', async () => {
 
 
 btnMail.addEventListener("click", () => {
-    console.log()
+  
     modalContainer.style.display = "flex"
-    document.body.style.position = "static"
-    document.body.style.height = "100%"
-    document.body.style.overflow = "hidden"
+   
 
 })
 
